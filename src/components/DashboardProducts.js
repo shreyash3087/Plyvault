@@ -99,7 +99,7 @@ const DashboardProducts = () => {
     <div>
       <div className="min-h-screen pb-10 bg-gray-100">
         <div className="flex flex-col lg:flex-row">
-          {/* Sidebar for Desktop */}
+   
           <div className="hidden lg:block w-1/4 p-4">
             <SidebarFilter
               brands={brands}
@@ -107,10 +107,10 @@ const DashboardProducts = () => {
             />
           </div>
 
-          {/* Main Content */}
+   
           <div className="w-full lg:w-3/4 p-4">
             <div className="max-w-7xl mx-auto">
-              {/* Search and Sort */}
+         
               <div className="bg-white shadow-lg rounded-lg p-4 mb-8">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-4">
                   <input
@@ -151,7 +151,7 @@ const DashboardProducts = () => {
                   </div>
                 </div>
               </div>
-              {/* Filter Dropdown for Mobile */}
+
               {isFilterOpen && (
                 <div className="lg:hidden shadow-lg rounded-lg mb-4">
                   <SidebarFilter
@@ -160,7 +160,7 @@ const DashboardProducts = () => {
                   />
                 </div>
               )}
-              {/* Product Display */}
+       
               {sortedProducts.length > 0 ? (
                 viewMode === "card" ? (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

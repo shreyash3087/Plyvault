@@ -98,7 +98,7 @@ function LoginPage() {
                   </form>
                   {error && <p className="mt-6 text-xs text-red-600 text-center">{error}</p>}
                   <p className="mt-6 text-xs text-gray-600 text-center">
-                    I agree to abide by PlyVault's{' '}
+                    I agree to abide by PlyVault&lsquo;s{' '}
                     <a href="#" className="border-b border-gray-500 border-dotted">
                       Terms of Service
                     </a>{' '}
@@ -109,7 +109,7 @@ function LoginPage() {
                     .
                   </p>
                 <p className="mt-4 text-sm text-gray-600 text-center">
-                  Don't have an account?{" "}
+                  Don&lsquo;t have an account?{" "}
                   <Link
                     href="/register"
                     className="text-[#4cae9e] hover:text-[#256359] font-semibold"

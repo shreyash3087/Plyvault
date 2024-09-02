@@ -51,7 +51,7 @@ const ProductDetail = () => {
           throw new Error("User not authenticated");
         }
         const data = await response.json();
-        setUserRole(data.user?.role); // Use the user role from the token payload
+        setUserRole(data.user?.role);
         setUserId(data.user?.id);
       } catch (error) {
         console.error("Error checking user token:", error);
@@ -92,15 +92,15 @@ const ProductDetail = () => {
       return;
     }
   
-    // Check if an image is being uploaded
+
     if (editedProduct.imageUrl) {
       try {
         if (userRole === "Admin") {
+          console.log("SDFSADSAFDSA",editedProduct)
           const response = await fetch(`/api/products/${product._id}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
             body: JSON.stringify(editedProduct),
           });
@@ -113,7 +113,6 @@ const ProductDetail = () => {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
             body: JSON.stringify({
               productId: product._id,
@@ -141,12 +140,10 @@ const ProductDetail = () => {
     const updatedSpecs = [...editedProduct.specification.specs];
     if (newHeading && newSpec) {
       if (editingIndex !== null) {
-        // Update existing heading/spec
         updatedHeadings[editingIndex] = newHeading;
         updatedSpecs[editingIndex] = newSpec;
-        setEditingIndex(null); // Reset editing index
+        setEditingIndex(null);
       } else {
-        // Add new heading/spec
         updatedHeadings.push(newHeading);
         updatedSpecs.push(newSpec);
       }

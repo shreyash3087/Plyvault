@@ -10,7 +10,6 @@ export default function Footer() {
     <footer className={`py-10 bg-[#0e1e1b] text-white  ${isLogin || isRegister?"hidden":"block"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
           <div>
             <h3 className="text-2xl font-semibold mb-4">PlyVault</h3>
             <p className="text-gray-400">
@@ -19,7 +18,6 @@ export default function Footer() {
             
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -30,8 +28,6 @@ export default function Footer() {
               <li><a href="#" className="text-gray-400 hover:text-gray-200">Privacy Policy</a></li>
             </ul>
           </div>
-
-          {/* Resources */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
@@ -42,8 +38,6 @@ export default function Footer() {
               <li><a href="#" className="text-gray-400 hover:text-gray-200">Careers</a></li>
             </ul>
           </div>
-
-          {/* Follow Us */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">

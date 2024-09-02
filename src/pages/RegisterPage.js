@@ -119,7 +119,7 @@ function RegisterPage() {
                   <span className="ml-2">Sign Up</span>
                 </button>
                 <p className="mt-6 text-xs text-gray-600 text-center">
-                  I agree to abide by PlyVault's{" "}
+                  I agree to abide by PlyVault&lsquo;s{" "}
                   <a
                     href="#"
                     className="border-b border-gray-500 border-dotted"

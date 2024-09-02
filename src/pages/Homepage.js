@@ -127,8 +127,8 @@ export default function Home() {
             Premier Hub for Managing Plypicker
           </h1>
           <span className="mt-8 max-w-lg text-center text-xl leading-relaxed text-gray-800">
-            Whether you're an admin or a valued member of the Plypicker
-            community, dive in to seamlessly oversee and manage Plypicker's
+            Whether you&lsquo;re an admin or a valued member of the Plypicker
+            community, dive in to seamlessly oversee and manage Plypicker&lsquo;s
             products and services.
           </span>
           <p className="mt-3 rounded border px-3 py-1 shadow">
@@ -230,7 +230,7 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-lg max-w-3xl mx-auto">
               Explore how PlyPicker revolutionizes the home furnishing industry
-              and how PlyVault enhances its team's product management
+              and how PlyVault enhances its team&lsquo;s product management
               experience.
             </p>
           </div>
@@ -247,7 +247,7 @@ export default function Home() {
                   Get in Touch
                 </h2>
                 <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
-                  We're committed to providing exceptional service and support.
+                  We&lsquo;re committed to providing exceptional service and support.
                 </p>
               </div>
             </div>
@@ -255,7 +255,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2">
                 <div className="h-full pr-6">
                   <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
-                    Reach out to us for any inquiries or support. We're here to help you with all your questions and concerns. Let’s start a conversation and find the best solution together.
+                    Reach out to us for any inquiries or support. We&lsquo;re here to help you with all your questions and concerns. Let’s start a conversation and find the best solution together.
                   </p>
                   <ul className="mb-6 md:mb-0">
                     <li className="flex">

@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBMxv8nuvdFQJ7U14lkQyykW_-YtHIiJ1E",
   authDomain: "plyvault.firebaseapp.com",
@@ -12,7 +11,6 @@ const firebaseConfig = {
   measurementId: "G-R3G39ZGKJY"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 

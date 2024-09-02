@@ -24,31 +24,7 @@ export async function PUT(req, { params }) {
   try {
     await dbConnect();
     const updateData = await req.json();
-    const cleanedUpdateData = {};
-    const fieldsToUpdate = [
-      'title', 
-      'price', 
-      'originalPrice', 
-      'discount', 
-      'imageUrl', 
-      'description', 
-      'company', 
-      'specification', 
-      'design'
-    ];
-
-    fieldsToUpdate.forEach(field => {
-      if (updateData[field] !== undefined) {
-        if (field === 'specification') {
-          cleanedUpdateData[field] = updateData[field];
-        } 
-       else {
-          cleanedUpdateData[field] = updateData[field].new;
-        }
-      }
-    });
-
-    const updatedProduct = await Product.findByIdAndUpdate(id, cleanedUpdateData, { new: true });
+    const updatedProduct = await Product.findByIdAndUpdate(id, updateData, { new: true });
 
     if (!updatedProduct) {
       return NextResponse.json({ error: 'Product not found' }, { status: 404 });
