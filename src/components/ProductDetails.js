@@ -46,17 +46,19 @@ const ProductDetail = () => {
     };
     const checkUserToken = async () => {
       try {
-        const response = await fetch("/api/check-token");
+        const response = await fetch("/api/profile", {
+          credentials: "include",
+        });
         if (!response.ok) {
           throw new Error("User not authenticated");
         }
         const data = await response.json();
         setUserRole(data.user?.role);
-        setUserId(data.user?.id);
+        setUserId(data.user?._id);
       } catch (error) {
         console.error("Error checking user token:", error);
         setError("User authentication failed. Please log in.");
-        router.push("/login");
+        // router.push("/login");
         return null;
       }
     };
