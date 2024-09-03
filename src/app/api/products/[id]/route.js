@@ -24,39 +24,8 @@ export async function PUT(req, { params }) {
   try {
     await dbConnect();
     const updateData = await req.json();
-    const cleanedUpdateData = {};
-    const fieldsToUpdate = [
-      'title', 
-      'price', 
-      'originalPrice', 
-      'discount', 
-      'imageUrl', 
-      'description', 
-      'company', 
-      'specification', 
-      'design'
-    ];
-    if (updateData.discount !== undefined && updateData.originalPrice !== undefined) {
-      const originalPrice = parseFloat(updateData.originalPrice.new);
-      const discount = parseFloat(updateData.discount.new);
 
-      if (!isNaN(originalPrice) && !isNaN(discount)) {
-        const price = originalPrice - (originalPrice * (discount / 100));
-        cleanedUpdateData.price = price.toFixed(2);
-      }
-    }
-    fieldsToUpdate.forEach(field => {
-      if (updateData[field] !== undefined) {
-        if (field === 'specification') {
-          cleanedUpdateData[field] = updateData[field];
-        } 
-        else if (field !== 'price') {
-          cleanedUpdateData[field] = updateData[field].new;
-        }
-      }
-    });
-
-    const updatedProduct = await Product.findByIdAndUpdate(id, cleanedUpdateData, { new: true });
+    const updatedProduct = await Product.findByIdAndUpdate(id, updateData, { new: true });
 
     if (!updatedProduct) {
       return NextResponse.json({ error: 'Product not found' }, { status: 404 });

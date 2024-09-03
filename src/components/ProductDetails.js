@@ -58,7 +58,7 @@ const ProductDetail = () => {
       } catch (error) {
         console.error("Error checking user token:", error);
         setError("User authentication failed. Please log in.");
-        // router.push("/login");
+        router.push("/login");
         return null;
       }
     };
@@ -98,7 +98,6 @@ const ProductDetail = () => {
     if (editedProduct.imageUrl) {
       try {
         if (userRole === "Admin") {
-          console.log("SDFSADSAFDSA",editedProduct)
           const response = await fetch(`/api/products/${product._id}`, {
             method: "PUT",
             headers: {

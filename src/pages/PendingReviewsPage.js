@@ -14,13 +14,13 @@ export default function PendingReviewsPage() {
   useEffect(() => {
     const checkUserRole = async () => {
       try {
-        const res = await fetch("/api/check-token", {
+        const res = await fetch("/api/profile", {
           credentials: "include",
         });
         const data = await res.json();
 
         if (data.user?.role === "Admin") {
-          setAdminId(data.user.id);
+          setAdminId(data.user._id);
           setIsAdmin(true);
           fetchReviews(); 
         } else {
